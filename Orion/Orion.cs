@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Terraria;
+using Orion.Languages;
 
 namespace Orion
 {
@@ -81,11 +82,11 @@ namespace Orion
 		{
 			foreach (ISharedService service in _injectionContainer.GetAll<ISharedService>())
 			{
-				Console.WriteLine($"  * Loading {service.Name} by {service.Author}");
+				Console.WriteLine(string.Format(Language.LoadingPluginOrService, service.Name, service.Author));
 			}
 			foreach (Plugin plugin in _injectionContainer.GetAll<Plugin>())
 			{
-				Console.WriteLine($"  * Loading {plugin.Name} by {plugin.Author}");
+				Console.WriteLine(string.Format(Language.LoadingPluginOrService, plugin.Name, plugin.Author));
 			}
 
 			WindowsLaunch.Main(new string[] {});

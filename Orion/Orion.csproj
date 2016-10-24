@@ -203,6 +203,12 @@
   <ItemGroup>
     <Content Include="LICENSE.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orion.Languages\Orion.Languages.csproj">
+      <Project>{94caed89-4bfb-4dcc-8c71-529f50be966c}</Project>
+      <Name>Orion.Languages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

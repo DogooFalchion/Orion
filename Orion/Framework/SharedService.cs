@@ -32,7 +32,7 @@ namespace Orion.Framework
 
 			Type type = GetType();
 			var attribute = type.GetCustomAttribute<ServiceAttribute>();
-			Author = attribute?.Author ?? "Anonymous";
+			Author = attribute?.Author ?? Languages.Language.AnonymousAuthor;
 			Name = attribute?.Name ?? type.Name;
 			Version = Assembly.GetAssembly(type).GetName().Version;
 		}
